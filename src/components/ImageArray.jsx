@@ -35,7 +35,7 @@ export const images = [
         src : pear
      },
      {   id : 6,
-        title : 'dragon',
+        title : 'dragon fruit',
         src : dragon
      },
      {   id : 7,
