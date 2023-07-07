@@ -1,0 +1,82 @@
+*{
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+body{
+  background-color: #f77f00;
+  background-image: url('./assets/wave2.png');
+  background-size: cover;
+}
+.memory-title{
+  color: white;
+  font-size: 38px;
+  margin: 2px;
+  text-align: center;
+  font-family: 'Khand', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.score-board{
+  display: flex;
+  max-width:210px;
+  margin: 0 auto;
+  justify-content: space-between;
+  position: relative;
+  bottom:10px;
+padding: 3px;
+  height: 50px;
+  color: white;
+  font-size: 18px;
+  background-color: #d62828;
+  align-items: center;
+  border-radius: 10px;
+}
+.score-board h6{
+padding: 5px;
+}
+.fruit-title{
+    color: #003049;
+    font-size: 14px;
+    position: relative;
+    bottom: 13px;
+  }
+
+.container{
+  margin: 0 auto;
+  max-width: 700px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: repeat(4,175px);
+}
+.child-container{
+  padding-top: 5px;
+  position: relative;
+  
+  
+}
+.card{
+  background-color: white;
+  width:130px;
+  height:130px;
+  border-radius: 3px;
+  margin: 5px;
+  padding: 20px;
+  transition: all .3s ease;
+
+}
+.card :hover{
+  transform: translateY(2px);
+ transition: 200ms;
+
+}
+.card:active {
+box-shadow: 0 0 10px 5px #dce7dc;
+}
+img{
+  height:90px;
+  width:90px;
+}
+.parent-header{
+  grid-column: 1/-1;
+width: 700px;
+}
