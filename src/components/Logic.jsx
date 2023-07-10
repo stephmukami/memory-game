@@ -1,6 +1,5 @@
 import React,{useState,useEffect} from 'react'
 import { images } from './ImageArray'
-import Game from './Game'
 import Header from './Header'
 import Card from './Card'
 
@@ -17,12 +16,10 @@ export default function Logic(){
 
     const handleScore = ()=>{
         setScore(prevCount => prevCount+1)
-        console.log('for handle score')
       }
   
       const handleHighScore = ()=>{
         setHighScore(score)
-        console.log('for handle high score')
 
       }
 
@@ -30,7 +27,6 @@ export default function Logic(){
         setChosen([])
         setHighScore(score)
         setScore(0)
-        console.log('for handle reset')
 
     }
 
@@ -38,7 +34,6 @@ export default function Logic(){
         setChosen(
             [card,...chosen]
         )
-        console.log('for handle add card')
 
     }
 
@@ -61,22 +56,20 @@ export default function Logic(){
       () =>{
         function gameLogic(){
             randomize(content)
-            setContent(content) //shd i bring in prev state
+            setContent(content) 
         }
             gameLogic()
       },[score,highscore]
     )
 
-    function handleGamePlay(card){//use id or card?
+    function handleGamePlay(card){
         if (chosen.includes(card)){
-            //set game over or restart message?
             reset()
         }else{
             handleAddCard(card)
             handleScore() 
             handleHighScore()
         }
-        console.log('for handle game play')
 
     }
     return(
