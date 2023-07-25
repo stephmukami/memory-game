@@ -34,7 +34,7 @@ export default function Logic(){
         setChosen(
             [card,...chosen]
         )
-
+            console.log(chosen)
     }
 
     function randomize (arr){

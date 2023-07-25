@@ -7,6 +7,12 @@ body{
   background-image: url('./assets/wave2.png');
   background-size: cover;
 }
+.parent-header{
+  
+  width:inherit;
+  max-width:700px;
+  grid-column: span 4;
+}
 .memory-title{
   color: white;
   font-size: 38px;
@@ -42,11 +48,14 @@ padding: 5px;
   }
 
 .container{
-  margin: 0 auto;
-  max-width: 700px;
+ max-width: 700px;
+  margin :0 auto;
   height: 600px;
   display: grid;
-  grid-template-columns: repeat(4,175px);
+  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr)); /* Use auto-fit and minmax for flexible columns */
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 5px;
 }
 .child-container{
   padding-top: 5px;
@@ -76,7 +85,20 @@ img{
   height:90px;
   width:90px;
 }
-.parent-header{
-  grid-column: 1/-1;
-width: 700px;
+
+@media (max-width: 768px) {  
+  .container{
+    max-width: 500px;
+    grid-template-columns: repeat(auto-fit, minmax(125px, 1fr)); /* Use auto-fit and minmax for flexible columns */
+  }
+  .parent-header{
+    max-width: 500px;
+  }
+  .card{
+    max-width:120px;
+    max-height:120px;
+  }
+  .fruit-title{
+    font-size: 12px;
+  }
 }
