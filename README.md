@@ -1,6 +1,6 @@
 
 <h1 align="center">
-  Memory Game
+  Memory Game 🤩
   <br>
 </h1>
 
